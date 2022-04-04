@@ -42,3 +42,76 @@ window.addEventListener('scroll', function () {
 
   lastScrollY = this.window.scrollY;
 });
+
+/*==================== SCROLL REVEAL ANIMATION ====================*/
+const sr = ScrollReveal({
+  reset: true,
+  distance: '60px',
+  duration: 1250,
+});
+
+//top
+sr.reveal(
+  `.hero__text , .logo__section-sponsor, .hero__btn , .logo__section-title, .contact__desc`,
+  {
+    origin: 'top',
+    interval: 100,
+  }
+);
+
+//left with interval
+sr.reveal(
+  ` .hero__image, .why__section-left , .faq__section-item ,
+   .faq-heading, .main-heading, .hero__blog-text,
+   .description__section>*, .about__text>*, .blog-content__section>*,
+   .privacy-policy__section>* `,
+  {
+    origin: 'left',
+    delay: 200,
+    interval: 300,
+  }
+);
+
+//left
+sr.reveal(` .hero__title`, {
+  origin: 'left',
+});
+
+//right
+sr.reveal(
+  `.why__section-right , .image__section_text, .box-orange, .box-orange>* `,
+  {
+    origin: 'right',
+    interval: 100,
+  }
+);
+
+//bottom with interval
+sr.reveal(
+  `.social-logo>img , .feature__card-color , .feature__card-text , .customer__card>.customer__card-item,
+   .row-1>* , .row-2>* , .customer-item, .pricing__section-items>*, .team-members>*, .featured-post-items>*`,
+  {
+    origin: 'bottom',
+    interval: 300,
+  }
+);
+
+//bottom
+sr.reveal(`.contact-form`, {
+  origin: 'bottom',
+});
+
+ScrollReveal({ distance: '0px', duration: 1250 }).reveal(
+  `.image__section , .happy__section, .hero__about, .hero__pricing, h1`,
+  {
+    delay: 200,
+    interval: 100,
+  }
+);
+ScrollReveal({ distance: '0px', duration: 1250 }).reveal(
+  `.description__section-img, .hero__blog-img`,
+  {
+    delay: 500,
+    interval: 100,
+  }
+);
