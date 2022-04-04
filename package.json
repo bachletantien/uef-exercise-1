@@ -1,4 +1,5 @@
 {
+  "homepage": "https://bachletantien.github.io/uef-exercise-1",
   "scripts": {
     "watch-sass": "sass styles --no-source-map --style=compressed --watch"
   },
