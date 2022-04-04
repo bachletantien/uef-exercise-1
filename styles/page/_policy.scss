@@ -1,0 +1,34 @@
+@use '../abstracts' as *;
+
+.privacy-policy__section {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  // padding: 0 49.3rem;
+  padding-top: 15.4rem;
+  padding-bottom: 27.8rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 93.4rem;
+
+  h2,
+  h3 {
+    padding-top: 2rem;
+    color: $clr-black;
+  }
+
+  h2 {
+    font-weight: 600;
+    line-height: 106.5%;
+    /* or 51px */
+
+    letter-spacing: -0.03em;
+  }
+
+  h4 {
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    /* identical to box height, or 133% */
+  }
+}

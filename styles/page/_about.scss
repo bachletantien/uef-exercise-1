@@ -1,0 +1,260 @@
+@use '../abstracts' as *;
+
+.header__about {
+  background-image: url(../../assets/images/BG.png);
+  background-size: cover;
+  background-position: center;
+
+  .container {
+    max-width: 142rem;
+    width: 100%;
+    margin: 0 auto;
+
+    .hero__about {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      h1 {
+        margin-top: 11.3rem;
+        margin-bottom: 2.4rem;
+        font-weight: 600;
+        font-size: 6.4rem;
+        line-height: 68px;
+        /* identical to box height, or 106% */
+        letter-spacing: -0.03em;
+        color: #0d1317;
+      }
+
+      &-right {
+        transform: translate(-40%, 70%);
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    .container {
+      .hero__about {
+        &-right {
+          img {
+            width: 15.8rem;
+            height: 22.8rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 769px) {
+    .container {
+      .hero__about {
+        flex-direction: column;
+        margin-bottom: -20rem;
+
+        &-right {
+          img {
+            width: 15.8rem;
+            height: 22.8rem;
+          }
+          transform: none;
+          margin-top: 3rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 376px) {
+    .container {
+      .hero__about {
+        margin-bottom: 5rem;
+        &-right {
+          img {
+            width: 10rem;
+            height: 15rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// about description section
+.description__section {
+  // margin: 12.8rem 25rem;
+  margin: 12.8rem auto;
+  width: 100%;
+  max-width: 142rem;
+
+  h1 {
+    margin-bottom: 2.4rem;
+  }
+
+  &-img {
+    margin-top: 8rem;
+    position: relative;
+
+    img {
+      width: 100%;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 7.7rem;
+      height: 8.5rem;
+      background: $clr-blue;
+      bottom: -3rem;
+      right: 15rem;
+      // transform: translate(-100%, 30%);
+      border-radius: 0 0 0 1.6rem;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 4.9rem;
+      height: 5.3rem;
+      background: $clr-orange;
+      bottom: -10rem;
+      right: 10rem;
+      // transform: translate(-50%, 200%);
+      border-radius: 1.6rem 0 0 0;
+    }
+  }
+
+  .about__text {
+    margin-top: 6.5rem;
+    width: 80%;
+    text-align: justify;
+    .text-bold {
+      font-weight: 600;
+      color: $clr-black;
+      margin-top: 3rem;
+    }
+    p {
+      font-weight: 500;
+      font-size: 1.8rem;
+      line-height: 3.4rem;
+      /* or 142% */
+      color: $clr-gray;
+    }
+  }
+
+  @media (max-width: 991px) {
+    margin: 8.8rem auto;
+    &-img {
+      &::before {
+        width: 4rem;
+        height: 4.8rem;
+        bottom: 4rem;
+        right: 3rem;
+      }
+      &::after {
+        width: 3.2rem;
+        height: 3.6rem;
+        bottom: -1rem;
+        right: 0;
+      }
+    }
+    .about__text {
+      margin-top: 5rem;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 679px) {
+    margin: 5rem auto;
+  }
+}
+
+// about team section
+.team__section {
+  // margin: 25rem;
+  width: 100%;
+  max-width: 142rem;
+  margin: 0 auto;
+
+  &-element {
+    display: flex;
+    gap: 4em;
+
+    .main-heading {
+      max-width: 21.1rem;
+      h1 {
+        font-weight: 600;
+        font-size: 4.8rem;
+        line-height: 5.6rem;
+        /* identical to box height, or 117% */
+        letter-spacing: -0.03em;
+
+        color: #0d1317;
+        margin-bottom: 2.4rem;
+      }
+    }
+
+    .team-members {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 4rem;
+
+      .member {
+        &-img {
+          .avatar {
+            img {
+              width: 100%;
+            }
+          }
+        }
+
+        .position {
+          margin-top: 3.2rem;
+          margin-bottom: 0.8rem;
+          color: $clr-blue;
+          font-weight: 500;
+          line-height: 2.4rem;
+          /* identical to box height, or 133% */
+        }
+        h3 {
+          font-weight: 600;
+          font-size: 2.2rem;
+          line-height: 2.8rem;
+          color: $clr-black;
+          margin-bottom: 3.3rem;
+          /* identical to box height, or 127% */
+        }
+        .social__icon {
+          display: flex;
+          align-items: center;
+          gap: 2.4rem;
+          margin-bottom: 10rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    .team-members {
+      grid-template-columns: repeat(2, 1fr);
+
+      .member {
+        .social__icon {
+          margin-bottom: 5rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 769px) {
+    &-element {
+      gap: 2rem;
+      flex-direction: column;
+      .main-heading {
+        max-width: 100%;
+      }
+    }
+  }
+  @media (max-width: 480px) {
+    .team-members {
+      grid-template-columns: 1fr;
+    }
+  }
+}

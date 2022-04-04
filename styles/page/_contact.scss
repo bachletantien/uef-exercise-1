@@ -1,0 +1,123 @@
+@use '../abstracts' as *;
+
+.contact__section {
+  padding-bottom: 20rem;
+  padding-top: 22.4rem;
+
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  gap: 11.4em;
+
+  .contact__desc {
+    &-logo {
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      // font-weight: 600;
+      // font-size: 4.8rem;
+      // line-height: 6.8rem;
+      /* or 106% */
+      // letter-spacing: -0.03em;
+      margin-bottom: 2rem;
+      color: #0d1317;
+    }
+
+    .address {
+      font-weight: 500;
+      font-size: 2.4rem;
+      line-height: 141%;
+      /* identical to box height, or 34px */
+
+      letter-spacing: -0.03em;
+      color: $clr-gray;
+    }
+  }
+
+  .contact-form {
+    h2 {
+      font-weight: 500;
+      font-size: 2.4rem;
+      line-height: 3.2rem;
+      color: #000000;
+      /* identical to box height, or 133% */
+      margin-bottom: 4rem;
+    }
+
+    form {
+      width: 100%;
+      max-width: 69rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      grid-auto-columns: 1fr;
+      column-gap: 2.4rem;
+      row-gap: 2.4rem;
+
+      .item-3,
+      .item-4,
+      .item-5,
+      .item-6 {
+        grid-column: span 2;
+      }
+
+      input[type='text'],
+      textarea {
+        background: white;
+        outline: none;
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 3rem;
+        /* identical to box height, or 167% */
+        color: $clr-black;
+        opacity: 0.75;
+
+        padding: 1.5rem 3.2rem;
+
+        border: 2px solid rgba(159, 160, 184, 0.4);
+        box-sizing: border-box;
+        border-radius: 5px;
+      }
+
+      input::placeholder {
+        font-family: $font-poppin;
+        font-weight: 400;
+      }
+
+      input[type='submit'] {
+        border-radius: 5px;
+        background: $clr-orange;
+        padding: 2.4rem 0;
+        color: $clr-white;
+        border: none;
+        outline: none;
+      }
+    }
+  }
+
+  @media (max-width: 1521px) {
+    gap: 7rem;
+  }
+  @media (max-width: 991px) {
+    .contact-form {
+      form {
+        & > *:nth-child(1),
+        & > *:nth-child(2) {
+          grid-column: span 2;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 769px) {
+    padding-top: 10.4rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
