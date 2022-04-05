@@ -78,13 +78,13 @@ sr.reveal(` .hero__title`, {
 });
 
 //right
-sr.reveal(
-  `.why__section-right , .image__section_text, .box-orange, .box-orange>* `,
-  {
-    origin: 'right',
-    interval: 100,
-  }
-);
+// sr.reveal(
+//   `.why__section-right , .image__section_text, .box-orange, .box-orange>* `,
+//   {
+//     origin: 'right',
+//     interval: 100,
+//   }
+// );
 
 //bottom with interval
 sr.reveal(
